@@ -26,7 +26,9 @@
                 <form method="post" action="<?php echo SITE_URL ?>/profile/file_upload" enctype="multipart/form-data">
                   <div class="" >
                     <input type="hidden" name="image" value="<?php echo $user['image'] ?>">
+                      <?php  if(!empty($user['image'])) {?>
                     <img  src="<?php echo "../public/upload/profile/".$user['image'] ?>" alt="Select photo" class="img-fluid" style="border-radius: 50%; width:200px">
+                    <?php } ?>
                   </div>
                   <div style="margin-top: 17px;">
                    <h3 class="h5"> <?php echo $user['login'] ?> </h3>
@@ -76,7 +78,7 @@
                           <div class="row">
                             <div class="col-md-3">
                                 Role
-                              <input type="text" placeholder=".col-md-4" class="form-control" name="role" value="<?php echo $user['role']; ?>">
+                              <input type="text" placeholder="" class="form-control" name="role" value="<?php echo $user['role']; ?>">
                             </div>
                             <div class="col-md-4">
                                 Mobile
@@ -84,7 +86,7 @@
                             </div>
                             <div class="col-md-5">
                                 Birthdate
-                              <input type="date" placeholder=".col-md-4" class="form-control" name="birthday" value="<?php echo $user['birthday']; ?>">
+                              <input type="date" placeholder="" class="form-control" name="birthday" value="<?php echo date( 'Y-m-d', strtotime($user['birthday'])); ?>">
                             </div>
                           </div>
                         </div>
