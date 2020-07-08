@@ -10,7 +10,7 @@ class Articles extends Base{
         Session::init();
         $model= $this->load->model("ArticlesModel");
         $bind=  array( 'user_id'  =>  Session::get('id'));
-        $page_count= $model->count();
+        $page_count= $model->count($bind);
 
         $data= [
             "articles"     =>  $model->list($bind, Page::current(), Page::per(11)),

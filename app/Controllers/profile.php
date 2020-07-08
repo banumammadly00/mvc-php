@@ -93,6 +93,8 @@ class Profile extends Base{
                 $model->file_edit($bind);
                 header("Location:". SITE_URL."/profile/user");
             }
+        }else {
+            header("Location:". SITE_URL."/profile/user");
         }
      }
 }

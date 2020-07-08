@@ -17,9 +17,9 @@ class GalleryModel extends Model{
 
     }
 
-    public function count(){
-
-   return $this->db->count($this->table_name, "id");
+    public function count($bind){
+        $where= "WHERE user_id=:user_id";
+   return $this->db->count($this->table_name, "id",$where, $bind);
     }
 
     public function image_by_id($bind){

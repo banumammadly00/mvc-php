@@ -62,9 +62,9 @@
          </section>
 <script>
     function delete_check() {
-    let checkBox = document.getElementsByName("check[]");
-    let checked=0;
-    for (let i=0; i<checkBox.length; i++) {
+    var checkBox = document.getElementsByName("check[]");
+    var checked=0, i;
+    for ( i=0; i<checkBox.length; i++) {
     if(checkBox[i].checked == true){
         checked++
         }

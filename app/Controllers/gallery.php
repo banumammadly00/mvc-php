@@ -14,7 +14,7 @@ class Gallery extends Base{
         $bind= array(
             'user_id'  =>  Session::get('id')
         );
-        $page_count= $model->count();
+        $page_count= $model->count($bind);
 
         $data = [
             "images"       =>  $model->images($bind, Page::current(), Page::per(9)),
@@ -31,7 +31,7 @@ class Gallery extends Base{
         Session::init();
         $model= $this->load->model("GalleryModel");
 
-        $file = $_FILES['file'];
+        //$file = $_FILES['file'];
         $count_file = count($_FILES['file']['name']);
 
         for ($i=0; $i<$count_file; $i++){

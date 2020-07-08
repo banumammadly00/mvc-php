@@ -92,6 +92,7 @@
               </div>
             </div>
           </div>
+    </div>
   <script>
   var loadFile = function(event) {
     var image = document.getElementById('output');

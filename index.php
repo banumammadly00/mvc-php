@@ -4,7 +4,7 @@ function __autoload($name){
 }
 define("SITE_URL", "/mvc-test");
 include_once "app/Controllers/Base.php";
-include_once "upload.php";
+//include_once "upload.php";
 // include_once "system/Form.php";
 // include_once "system/Load.php";
 // include_once "system/Model.php";
